@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Platform screener dan analisis kuantitatif saham Indonesia (IHSG) otomatis harian. Analisis VSA, Z-Score, dan VWAP Deviation terlengkap untuk trader VIP.">
     <meta name="keywords" content="analisis kuantitatif saham, screener saham ihsg, volume spread analysis indonesia, vsa saham, bot saham telegram, z-score saham, vwap deviation">
     <meta name="author" content="Analisis Kuantitatif Saham">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
     <link rel="canonical" href="https://quant.tataciptatama.my.id/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quant.tataciptatama.my.id/">
     <meta property="og:title" content="Keputusan Logis Berbasis Komputasi Saham Komprehensif">
     <meta property="og:description" content="Pangkas waktu screening saham IHSG berjam-jam. Dapatkan data kuantitatif objektif (VSA, Z-Score, MDD) langsung setiap sore.">
-    <meta property="og:image" content="https://quant.tataciptatama.my.id/assets/preview-banner.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://quant.tataciptatama.my.id/assets/preview-banner.jpg"> 
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://quant.tataciptatama.my.id/">
     <meta property="twitter:title" content="Screener Saham Kuantitatif Indonesia">
     <meta property="twitter:description" content="Dapatkan akses laporan data kuantitatif saham premium 14 hari gratis via Bot Telegram.">
@@ -79,15 +80,55 @@
                 Kami menyediakan instrumen pengolah data statistik 360° yang objektif. Bukan grup tebak-tebakan arah, bukan penasihat investasi, dan <b>sama sekali tidak memberikan sinyal jual-beli.</b>
             </p>
 
-            <!-- ====== DYNAMIC PROMO BOX ELEMENT ENHANCEMENT (MODEL-B) ====== -->
-            <div id="dynamic-promo-box"></div>
-
-            <div class="w-full block">
-                <a id="hero-cta-btn" href="https://t.me/AnalisisKuantitatifSahamBot" target="_blank" class="w-full inline-flex justify-center items-center gap-2 bg-emerald-500 hover:bg-brand-accentHover text-slate-950 font-black px-8 py-4 rounded-xl shadow-xl shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5 text-lg">
-                    <i id="hero-cta-icon" class="fa-solid fa-gift text-xl"></i> <span id="hero-cta-text">Klaim Akses Gratis 14 Hari</span>
-                </a>
+            <div id="promo-fase-1" class="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-5 mb-8 flex items-start gap-4 shadow-xl shadow-emerald-500/5 relative overflow-hidden backdrop-blur-sm group">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 blur-xl rounded-full pointer-events-none"></div>
+                <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-xl text-xl shrink-0 shadow-inner animate-pulse">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <div>
+                    <div class="text-sm font-black text-emerald-400 uppercase tracking-widest mb-1 flex items-center gap-2">
+                        PENAWARAN AWAL <span class="bg-emerald-500 text-slate-950 px-1.5 py-0.5 rounded text-[10px] font-black">GENESIS BATCH</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Masa uji coba gratis publik saat ini sedang aktif! Klaim sekarang untuk mengunci hak akses <span class="text-emerald-400 font-bold">VIP PREMIUM penuh selama 14 Hari secara murni gratis (Rp 0)</span>.
+                    </p>
+                    <div class="mt-2 text-[10px] text-brand-textMuted flex items-center gap-1.5 font-medium">
+                        <i class="fa-solid fa-clock"></i> Penawaran otomatis ditutup permanen pada 7 Agustus 2026 pukul 00:00 WIB.
+                    </div>
+                </div>
             </div>
-            <p id="hero-subtext" class="mt-4 text-xs text-brand-textMuted">Tanpa syarat • Bebas batalkan kapan saja</p>
+
+            <div id="promo-fase-2" class="hidden bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-5 mb-8 flex items-start gap-4 shadow-xl shadow-amber-500/5 relative overflow-hidden backdrop-blur-sm">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 blur-xl rounded-full pointer-events-none"></div>
+                <div class="p-3 bg-amber-500/20 text-amber-400 rounded-xl text-xl shrink-0 shadow-inner">
+                    <i class="fa-solid fa-bolt animate-bounce"></i>
+                </div>
+                <div>
+                    <div class="text-sm font-black text-amber-400 uppercase tracking-widest mb-1 flex items-center gap-2">
+                        PAKET STARTER AKTIF <span class="bg-amber-500 text-slate-950 px-1.5 py-0.5 rounded text-[10px] font-black">🔥 POPULER</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Masa promo gratis publik telah selesai. Buka akses data komputasi premium End-of-Day untuk Anda selama <span class="text-amber-400 font-bold">14 Hari penuh hanya seharga Rp 29.900</span>.
+                    </p>
+                    <div class="mt-2 text-[10px] text-amber-300/80 flex items-center gap-1.5 font-medium">
+                        <i class="fa-solid fa-circle-info"></i> Gunakan link referral dari rekan VIP Anda untuk mendapatkan promo eksklusif internal.
+                    </div>
+                </div>
+            </div>
+
+            <div id="hero-cta-fase-1" class="w-full block">
+                <a href="https://t.me/AnalisisKuantitatifSahamBot" target="_blank" class="w-full inline-flex justify-center items-center gap-2 bg-emerald-500 hover:bg-brand-accentHover text-slate-950 font-black px-8 py-4 rounded-xl shadow-xl shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5 text-lg">
+                    <i class="fa-solid fa-gift text-xl"></i> <span>Klaim Akses Gratis 14 Hari</span>
+                </a>
+                <p class="mt-4 text-xs text-brand-textMuted">Tanpa syarat • Bebas batalkan kapan saja</p>
+            </div>
+
+            <div id="hero-cta-fase-2" class="w-full block hidden">
+                <a href="https://t.me/AnalisisKuantitatifSahamBot?start=premium" target="_blank" class="w-full inline-flex justify-center items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black px-8 py-4 rounded-xl shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 text-lg">
+                    <i class="fa-solid fa-bolt text-xl"></i> <span>Aktifkan Starter Pack 14 Hari (Rp 29.900)</span>
+                </a>
+                <p class="mt-4 text-xs text-brand-textMuted"><i class="fa-solid fa-shield text-amber-400 mr-1"></i> Aktivasi otomatis via Payment Gateway resmi (Duitku) • Aman & Instan</p>
+            </div>
         </div>
 
         <div class="relative w-full">
@@ -217,13 +258,25 @@
         </div>
 
         <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
-            <h4 id="faq-trial-title" class="text-lg font-bold text-white mb-2 flex items-start gap-3">
-                <i class="fa-solid fa-gift text-emerald-400 mt-1"></i>
-                Bagaimana cara kerja Trial 14 Hari? Apakah harus pakai daftar?
-            </h4>
-            <p id="faq-trial-desc" class="text-slate-400 text-sm leading-relaxed pl-8">
-                Tidak perlu daftar sama sekali. Cukup klik tombol klaim di halaman ini yang akan mengarahkan Anda ke bot Telegram kami. Anda akan otomatis mendapat akses VIP penuh selama 14 hari. Jika merasa cocok setelah trial, Anda bisa berlangganan (mulai dari Rp 99.000). Jika tidak, abaikan saja.
-            </p>
+            <div id="faq-fase-1">
+                <h4 class="text-lg font-bold text-white mb-2 flex items-start gap-3">
+                    <i class="fa-solid fa-gift text-emerald-400 mt-1"></i>
+                    Bagaimana cara kerja Trial 14 Hari? Apakah harus pakai daftar?
+                </h4>
+                <p class="text-slate-400 text-sm leading-relaxed pl-8">
+                    Tidak perlu daftar sama sekali. Cukup klik tombol klaim di halaman ini yang akan mengarahkan Anda ke bot Telegram kami. Anda akan otomatis mendapat akses VIP penuh selama 14 hari. Jika merasa cocok setelah trial, Anda bisa berlangganan (mulai dari Rp 99.000). Jika tidak, abaikan saja.
+                </p>
+            </div>
+            
+            <div id="faq-fase-2" class="hidden">
+                <h4 class="text-lg font-bold text-white mb-2 flex items-start gap-3">
+                    <i class="fa-solid fa-gift text-amber-400 mt-1"></i>
+                    Bagaimana cara kerja Paket Starter 14 Hari?
+                </h4>
+                <p class="text-slate-400 text-sm leading-relaxed pl-8">
+                    Paket Starter dirancang khusus agar Anda dapat menguji keandalan data komputasi kami selama 14 hari penuh dengan komitmen biaya minimal harian (hanya Rp 29.900 sekali bayar). Setelah masa aktif habis, Anda bebas memutuskan untuk upgrade ke paket VIP penuh bulanan atau membiarkannya nonaktif tanpa denda apa pun.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -316,10 +369,20 @@
 <section class="py-24 px-4 text-center">
     <div class="max-w-2xl mx-auto">
         <h3 class="text-2xl sm:text-4xl font-black mb-4">Ganti Spekulasi Dengan Pendekatan Komputasi</h3>
-        <p id="bottom-promo-text" class="text-brand-textMuted mb-8 text-sm">Laporan kami objektif dan transparan. Akses laporan VIP kami sekarang dan rasakan sendiri bedanya tanpa biaya.</p>
-        <a id="bottom-cta-btn" href="https://t.me/AnalisisKuantitatifSahamBot" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-brand-accentHover text-slate-950 font-black px-8 py-4 rounded-xl transition-all text-md shadow-lg shadow-emerald-500/10">
-            <i id="bottom-cta-icon" class="fa-brands fa-telegram text-xl"></i> <span id="bottom-cta-text">Klaim Akses Gratis 14 Hari via Telegram</span>
-        </a>
+        
+        <div id="bottom-promo-fase-1">
+            <p class="text-brand-textMuted mb-8 text-sm">Laporan kami objektif dan transparan. Akses laporan VIP kami sekarang dan rasakan sendiri bedanya tanpa biaya.</p>
+            <a href="https://t.me/AnalisisKuantitatifSahamBot" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-brand-accentHover text-slate-950 font-black px-8 py-4 rounded-xl transition-all text-md shadow-lg shadow-emerald-500/10">
+                <i class="fa-brands fa-telegram text-xl"></i> <span>Klaim Akses Gratis 14 Hari via Telegram</span>
+            </a>
+        </div>
+
+        <div id="bottom-promo-fase-2" class="hidden">
+            <p class="text-brand-textMuted mb-8 text-sm">Pangkas waktu screening bursa sekarang juga. Uji keandalan algoritma riset murni kami melalui <b>Paket Starter 14 Hari hanya seharga Rp 29.900</b>.</p>
+            <a href="https://t.me/AnalisisKuantitatifSahamBot?start=premium" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black px-8 py-4 rounded-xl transition-all text-md shadow-lg shadow-amber-500/20">
+                <i class="fa-solid fa-bolt text-xl"></i> <span>Aktifkan Starter Pack via Telegram</span>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -354,109 +417,23 @@
     </div>
 </footer>
 
-<!-- ====== JAVASCRIPT AUTOMATION FOR MODEL-B SCRIPT ====== -->
 <script>
     // Konfigurasi tanggal penutupan promo publik (Samakan dengan Cloudflare Worker)
     const PROMO_END_DATE = new Date('2026-08-08T00:00:00+07:00');
 
-    const promoBox = document.getElementById('dynamic-promo-box');
-    const heroCtaText = document.getElementById('hero-cta-text');
-    const heroCtaBtn = document.getElementById('hero-cta-btn');
-    const heroCtaIcon = document.getElementById('hero-cta-icon');
-    const heroSubtext = document.getElementById('hero-subtext');
+    // JIKA WAKTU SAAT INI SUDAH MELEWATI BATAS PROMO, SWITCH GRID KE FASE 2
+    if (new Date() >= PROMO_END_DATE) {
+        // Sembunyikan elemen Fase 1
+        document.getElementById('promo-fase-1').classList.add('hidden');
+        document.getElementById('hero-cta-fase-1').classList.add('hidden');
+        document.getElementById('faq-fase-1').classList.add('hidden');
+        document.getElementById('bottom-promo-fase-1').classList.add('hidden');
 
-    const bottomCtaBtn = document.getElementById('bottom-cta-btn');
-    const bottomCtaText = document.getElementById('bottom-cta-text');
-    const bottomCtaIcon = document.getElementById('bottom-cta-icon');
-    const bottomPromoText = document.getElementById('bottom-promo-text');
-
-    const faqTitle = document.getElementById('faq-trial-title');
-    const faqDesc = document.getElementById('faq-trial-desc');
-
-    if (new Date() < PROMO_END_DATE) {
-        // ==========================================
-        // TAMPILAN FASE 1: MASA PROMO GRATIS 14 HARI
-        // ==========================================
-        promoBox.innerHTML = `
-            <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-5 mb-8 flex items-start gap-4 shadow-xl shadow-emerald-500/5 relative overflow-hidden backdrop-blur-sm group">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 blur-xl rounded-full pointer-events-none"></div>
-                <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-xl text-xl shrink-0 shadow-inner animate-pulse">
-                    <i class="fa-solid fa-fire-flame-curved"></i>
-                </div>
-                <div>
-                    <div class="text-sm font-black text-emerald-400 uppercase tracking-widest mb-1 flex items-center gap-2">
-                        PENAWARAN AWAL <span class="bg-emerald-500 text-slate-950 px-1.5 py-0.5 rounded text-[10px] font-black">GENESIS BATCH</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                        Masa uji coba gratis publik saat ini sedang aktif! Klaim sekarang untuk mengunci hak akses <span class="text-emerald-400 font-bold">VIP PREMIUM penuh selama 14 Hari secara murni gratis (Rp 0)</span>.
-                    </p>
-                    <div class="mt-2 text-[10px] text-brand-textMuted flex items-center gap-1.5 font-medium">
-                        <i class="fa-solid fa-clock"></i> Penawaran otomatis ditutup permanen pada 7 Agustus 2026 pukul 00:00 WIB.
-                    </div>
-                </div>
-            </div>
-        `;
-    } else {
-        // ==========================================
-        // TAMPILAN FASE 2: PASCA PROMO (STARTER PACK BERBAYAR Rp 29.900)
-        // ==========================================
-
-        // 1. Modifikasi Box Promo di Hero Section (Sangat Eye-Catching)
-        promoBox.innerHTML = `
-            <div class="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-5 mb-8 flex items-start gap-4 shadow-xl shadow-amber-500/5 relative overflow-hidden backdrop-blur-sm">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 blur-xl rounded-full pointer-events-none"></div>
-                <div class="p-3 bg-amber-500/20 text-amber-400 rounded-xl text-xl shrink-0 shadow-inner">
-                    <i class="fa-solid fa-bolt animate-bounce"></i>
-                </div>
-                <div>
-                    <div class="text-sm font-black text-amber-400 uppercase tracking-widest mb-1 flex items-center gap-2">
-                        PAKET STARTER AKTIF <span class="bg-amber-500 text-slate-950 px-1.5 py-0.5 rounded text-[10px] font-black">🔥 POPULER</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                        Masa promo gratis publik telah selesai. Buka akses data komputasi premium End-of-Day untuk Anda selama <span class="text-amber-400 font-bold">14 Hari penuh hanya seharga Rp 29.900</span>.
-                    </p>
-                    <div class="mt-2 text-[10px] text-amber-300/80 flex items-center gap-1.5 font-medium">
-                        <i class="fa-solid fa-circle-info"></i> Gunakan link referral dari rekan VIP Anda untuk mendapatkan promo eksklusif internal.
-                    </div>
-                </div>
-            </div>
-        `;
-
-        // 2. Modifikasi Tombol & Subtext Hero CTA
-        if (heroCtaText) heroCtaText.innerText = "Aktifkan Starter Pack 14 Hari (Rp 29.900)";
-        if (heroCtaIcon) {
-            heroCtaIcon.classList.remove('fa-gift');
-            heroCtaIcon.classList.add('fa-bolt');
-        }
-        if (heroCtaBtn) {
-            heroCtaBtn.classList.remove('bg-emerald-500', 'hover:bg-brand-accentHover', 'shadow-emerald-500/30');
-            heroCtaBtn.classList.add('bg-amber-500', 'hover:bg-amber-600', 'shadow-amber-500/20');
-        }
-        if (heroSubtext) {
-            heroSubtext.innerHTML = `<i class="fa-solid fa-shield text-amber-400 mr-1"></i> Aktivasi otomatis via Payment Gateway resmi (Duitku) • Aman & Instan`;
-        }
-
-        // 3. Modifikasi Tombol & Teks Promo Bagian Bawah
-        if (bottomPromoText) {
-            bottomPromoText.innerHTML = `Pangkas waktu screening bursa sekarang juga. Uji keandalan algoritma riset murni kami melalui <b>Paket Starter 14 Hari hanya seharga Rp 29.900</b>.`;
-        }
-        if (bottomCtaText) bottomCtaText.innerText = "Aktifkan Starter Pack via Telegram";
-        if (bottomCtaIcon) {
-            bottomCtaIcon.classList.remove('fa-telegram');
-            bottomCtaIcon.classList.add('fa-bolt');
-        }
-        if (bottomCtaBtn) {
-            bottomCtaBtn.classList.remove('bg-emerald-500', 'hover:bg-brand-accentHover');
-            bottomCtaBtn.classList.add('bg-amber-500', 'hover:bg-amber-600', 'shadow-amber-500/20');
-        }
-
-        // 4. Modifikasi Komponen FAQ Agar Selaras
-        if (faqTitle) {
-            faqTitle.innerHTML = `<i class="fa-solid fa-gift text-amber-400 mt-1"></i> Bagaimana cara kerja Paket Starter 14 Hari?`;
-        }
-        if (faqDesc) {
-            faqDesc.innerHTML = `Paket Starter dirancang khusus agar Anda dapat menguji keandalan data komputasi kami selama 14 hari penuh dengan komitmen biaya minimal harian (hanya Rp 29.900 sekali bayar). Setelah masa aktif habis, Anda bebas memutuskan untuk upgrade ke paket VIP penuh bulanan atau membiarkannya nonaktif tanpa denda apa pun.`;
-        }
+        // Munculkan elemen Fase 2
+        document.getElementById('promo-fase-2').classList.remove('hidden');
+        document.getElementById('hero-cta-fase-2').classList.remove('hidden');
+        document.getElementById('faq-fase-2').classList.remove('hidden');
+        document.getElementById('bottom-promo-fase-2').classList.remove('hidden');
     }
 </script>
 

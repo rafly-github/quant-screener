@@ -170,45 +170,61 @@
 
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 border-t border-slate-900 overflow-hidden">
     <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
+        <div class="text-center mb-6">
             <span class="text-emerald-400 font-bold text-sm tracking-widest uppercase mb-2 block">Sneak Peek</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Intip Kualitas Data Anda</h2>
-            <p class="text-brand-textMuted">Format PDF resolusi tinggi yang dikirim otomatis ke perangkat Anda setiap sore.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Intip Kualitas Data Laporan VIP</h2>
+            <p class="text-brand-textMuted max-w-2xl mx-auto">Klik tab di bawah untuk melihat cuplikan halaman laporan PDF asli beresolusi tinggi yang dikirim otomatis setiap sore.</p>
         </div>
 
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8 max-w-3xl mx-auto">
+            <button onclick="switchReportTab(1)" id="tab-btn-1" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border transition-all bg-emerald-500 text-slate-950 border-emerald-500 shadow-lg shadow-emerald-500/20">
+                <i class="fa-solid fa-chart-pie mr-1.5"></i> Hal 1: Rangkuman & Tren Makro
+            </button>
+            <button onclick="switchReportTab(2)" id="tab-btn-2" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700">
+                <i class="fa-solid fa-chart-network mr-1.5"></i> Hal 2: Peta Anomali & Matriks Risiko
+            </button>
+            <button onclick="switchReportTab(4)" id="tab-btn-4" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700">
+                <i class="fa-solid fa-calculator mr-1.5"></i> Hal 4: Detail Analisis Saham (JSMR)
+            </button>
+        </div>
+
+        <!-- Tab Contents / Screenshot Containers -->
         <div class="relative mx-auto max-w-4xl">
-            <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-2xl blur opacity-20"></div>
-            <div class="relative bg-white rounded-xl shadow-2xl overflow-hidden p-2 sm:p-4">
-                <div class="bg-[#111827] text-white p-4 rounded-t-lg flex justify-between items-center">
-                    <div class="font-black text-sm sm:text-xl">ANALISIS KUANTITATIF SAHAM</div>
-                    <div class="text-[#D4AF37] font-bold text-xs sm:text-sm">VIP MEMBER ONLY ★</div>
+            <div class="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur opacity-10"></div>
+
+            <div class="relative bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl p-2 sm:p-3 overflow-hidden">
+                <!-- Page 1 -->
+                <div id="report-tab-1" class="block w-full">
+                    <div class="text-xs text-brand-textMuted mb-2 px-1 flex justify-between items-center">
+                        <span><i class="fa-solid fa-file-pdf text-red-400 mr-1"></i> Screenshot_halaman_1.jpg</span>
+                        <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">Halaman 1 dari 8</span>
+                    </div>
+                    <img src="assets/Screenshot_aks_1.jpg" alt="Laporan VIP Kuantitatif Halaman 1" class="rounded-xl w-full border border-slate-800 shadow-inner object-contain" loading="lazy">
                 </div>
-                <div class="p-4 bg-gray-50 border border-gray-200 rounded-b-lg">
-                    <div class="font-bold text-gray-800 mb-3 border-b pb-2 text-sm">▶ KATEGORI: MOMENTUM AKTIF</div>
-                    <div class="bg-white border border-gray-300 rounded p-4 text-xs sm:text-sm text-gray-700 shadow-sm flex flex-col md:flex-row gap-4">
-                        <div class="w-full md:w-1/3">
-                            <span class="font-black text-lg text-gray-900 block mb-2">JSMR</span>
-                            Sektor: Infrastructures<br>
-                            Trend: Coiling (MA20)<br>
-                            Harga: Rp 3.010 (+1.3%)
-                        </div>
-                        <div class="w-full md:w-1/3 border-t md:border-t-0 md:border-l border-gray-200 md:pl-4 pt-2 md:pt-0">
-                            Support Hist: Rp 2.784 (-1.9%)<br>
-                            Area Resisten: Rp 3.349 (+5.7%)<br>
-                            Likuiditas: Rp 8.6 M
-                        </div>
-                        <div class="w-full md:w-1/3 border-t md:border-t-0 md:border-l border-gray-200 md:pl-4 pt-2 md:pt-0">
-                            Kondisi: Momentum Aktif<br>
-                            Probabilitas Historis: 60.9%<br>
-                            Vol Anomali: 2.11z
-                        </div>
+
+                <!-- Page 2 -->
+                <div id="report-tab-2" class="hidden w-full">
+                    <div class="text-xs text-brand-textMuted mb-2 px-1 flex justify-between items-center">
+                        <span><i class="fa-solid fa-file-pdf text-red-400 mr-1"></i> Screenshot_halaman_2.jpg</span>
+                        <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">Halaman 2 dari 8</span>
                     </div>
-                    <div class="bg-red-50/50 border border-red-100 rounded p-3 mt-2 text-[11px] sm:text-xs text-gray-600 italic">
-                        <span class="font-bold text-emerald-700 not-italic">Data Quant:</span> Z-Score: 0.75 | VWAP Dev: 0.31% | Beta: 0.17 | MRS: 10.94% | ATR Rank: 20.3%<br>
-                        <span class="font-bold text-gray-800 not-italic">Kalkulasi Algoritma:</span> [Konfirmasi Breakout VCP Terukur oleh Model Kuantitatif]
+                    <img src="assets/Screenshot_aks_2.jpg" alt="Laporan VIP Kuantitatif Halaman 2" class="rounded-xl w-full border border-slate-800 shadow-inner object-contain" loading="lazy">
+                </div>
+
+                <!-- Page 4 -->
+                <div id="report-tab-4" class="hidden w-full">
+                    <div class="text-xs text-brand-textMuted mb-2 px-1 flex justify-between items-center">
+                        <span><i class="fa-solid fa-file-pdf text-red-400 mr-1"></i> Screenshot_halaman_4.jpg</span>
+                        <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">Halaman 4 dari 8</span>
                     </div>
+                    <img src="assets/Screenshot_aks_3.jpg" alt="Laporan VIP Kuantitatif Halaman 4" class="rounded-xl w-full border border-slate-800 shadow-inner object-contain" loading="lazy">
                 </div>
             </div>
+
+            <p class="mt-4 text-center text-xs text-brand-textMuted italic">
+                <i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> Seluruh grafik dan metrik kuantitatif di atas dihasilkan murni secara matematis oleh sistem otomatis End-of-Day kami.
+            </p>
         </div>
     </div>
 </section>
@@ -421,5 +437,29 @@
     }
 </script>
 
+<script>
+    // Fungsi untuk navigasi tab preview laporan VIP
+    function switchReportTab(pageNumber) {
+        const pages = [1, 2, 4];
+        pages.forEach(num => {
+            const tabContent = document.getElementById(`report-tab-${num}`);
+            const tabBtn = document.getElementById(`tab-btn-${num}`);
+
+            if (num === pageNumber) {
+                tabContent.classList.remove('hidden');
+                tabContent.classList.add('block');
+
+                // Style Active Button
+                tabBtn.className = "px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border transition-all bg-emerald-500 text-slate-950 border-emerald-500 shadow-lg shadow-emerald-500/20";
+            } else {
+                tabContent.classList.add('hidden');
+                tabContent.classList.remove('block');
+
+                // Style Inactive Button
+                tabBtn.className = "px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700";
+            }
+        });
+    }
+</script>
 </body>
 </html>

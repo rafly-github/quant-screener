@@ -521,8 +521,8 @@
 
         // 3. Jika ada parameter referal, sisipkan ke dalam link checkout
         if (refId) {
-            if (btnHero) btnHero.href = `/checkout?paket=starter&ref=${refId}`;
-            if (btnFooter) btnFooter.href = `/checkout?paket=starter&ref=${refId}`;
+            if (btnHero) btnHero.href = `https://cloudflare.tataciptatama.my.id/checkout?paket=starter&ref=${refId}`;
+            if (btnFooter) btnFooter.href = `https://cloudflare.tataciptatama.my.id/checkout?paket=starter&ref=${refId}`;
 
             // Opsional: Simpan di sessionStorage agar tidak hilang jika user refresh halaman
             sessionStorage.setItem('upline_id', refId);
@@ -530,8 +530,8 @@
             // Cek apakah sebelumnya sudah ada di penyimpanan sementara
             const savedRef = sessionStorage.getItem('upline_id');
             if (savedRef) {
-                if (btnHero) btnHero.href = `/checkout?paket=starter&ref=${savedRef}`;
-                if (btnFooter) btnFooter.href = `/checkout?paket=starter&ref=${savedRef}`;
+                if (btnHero) btnHero.href = `https://cloudflare.tataciptatama.my.id/checkout?paket=starter&ref=${savedRef}`;
+                if (btnFooter) btnFooter.href = `https://cloudflare.tataciptatama.my.id/checkout?paket=starter&ref=${savedRef}`;
             }
         }
     });

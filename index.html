@@ -460,5 +460,54 @@
         });
     }
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const pages = [1, 2, 4];
+        let currentPageIndex = 0; // Set default ke halaman 1
+
+        // Mengambil elemen kontainer yang membungkus gambar screenshot
+        const swipeContainer = document.querySelector('.relative.bg-slate-900.rounded-2xl.overflow-hidden');
+
+        if (swipeContainer) {
+            let touchstartX = 0;
+            let touchendX = 0;
+
+            // Merekam koordinat jari saat menyentuh layar
+            swipeContainer.addEventListener('touchstart', e => {
+                touchstartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            // Merekam koordinat jari saat dilepas dan menghitung jaraknya
+            swipeContainer.addEventListener('touchend', e => {
+                touchendX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const swipeThreshold = 50; // Minimal jarak gesekan 50 pixel agar terhitung sebagai swipe
+
+                if (touchstartX - touchendX > swipeThreshold) {
+                    // Swipe ke Kiri (Geser ke gambar selanjutnya)
+                    currentPageIndex = (currentPageIndex + 1) % pages.length;
+                    switchReportTab(pages[currentPageIndex]);
+                } else if (touchendX - touchstartX > swipeThreshold) {
+                    // Swipe ke Kanan (Geser ke gambar sebelumnya)
+                    currentPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
+                    switchReportTab(pages[currentPageIndex]);
+                }
+            }
+
+            // Memastikan index selalu sinkron jika user menggunakan tombol klik secara manual
+            pages.forEach((num, index) => {
+                const tabBtn = document.getElementById(`tab-btn-${num}`);
+                if (tabBtn) {
+                    tabBtn.addEventListener('click', () => {
+                        currentPageIndex = index;
+                    });
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

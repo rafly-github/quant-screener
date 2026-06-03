@@ -127,7 +127,7 @@
                         </li>
                         <li class="flex items-start gap-2.5">
                             <span class="bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded text-[10px] font-black mt-0.5">3</span>
-                            <span><b>Terima Laporan Sore Ini:</b> Laporan PDF dikirim ke Telegram Anda setiap hari bursa tutup.</span>
+                            <span><b>Terima Laporan:</b> Laporan PDF dikirim ke Telegram Anda setiap hari bursa tutup.</span>
                         </li>
                     </ul>
                 </div>
@@ -197,6 +197,22 @@
     </div>
 </section>
 
+<section class="py-24 px-4 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800">
+                <h4 class="font-bold text-lg mb-2 text-emerald-400">Apakah laporan ini memberikan sinyal beli atau jual pasti?</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">Tidak. Kami adalah platform pengolah data komputasi murni. Laporan kami berfungsi sebagai screener statistik tingkat lanjut untuk memangkas waktu riset Anda. Keputusan akhir untuk transaksi mutlak berada di tangan Anda (DYOR).</p>
+            </div>
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800">
+                <h4 class="font-bold text-lg mb-2 text-emerald-400">Kapan dan di mana laporan harian ini dikirimkan?</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">Laporan berformat PDF resolusi tinggi dikirimkan secara otomatis ke dalam Channel Telegram VIP setiap hari bursa aktif, segera setelah market ditutup (data End-of-Day).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="py-24 px-4 text-center border-t border-slate-900">
     <div class="max-w-2xl mx-auto">
         <h3 class="text-2xl sm:text-4xl font-black mb-4">Ganti Spekulasi Dengan Pendekatan Komputasi</h3>
@@ -230,15 +246,30 @@
     </div>
 </section>
 
-<footer class="bg-slate-950 text-slate-500 text-[11px] py-16 px-4 border-t border-slate-900 leading-relaxed">
-    <div class="max-w-5xl mx-auto text-center mt-6 pt-6 border-t border-slate-900/40 text-[10px]">
-        &copy; 2026 Analisis Kuantitatif Saham. All Rights Reserved.
+<section class="py-12 px-4 border-t border-slate-900 bg-slate-950">
+    <div class="max-w-5xl mx-auto text-[11px] text-slate-500 leading-relaxed space-y-4 text-justify">
+        <p><strong class="text-slate-400">DISCLAIMER (PENAFIAN RISIKO):</strong> Perdagangan saham dan instrumen finansial lainnya melibatkan risiko kerugian finansial yang signifikan. Layanan "Analisis Kuantitatif Saham" beroperasi murni sebagai penyedia perangkat lunak komputasi dan analisis data statistik (SaaS - Software as a Service). Kami BUKAN penasihat keuangan, BUKAN manajer investasi, dan BUKAN perusahaan sekuritas.</p>
+
+        <p><strong class="text-slate-400">KEPATUHAN HUKUM & TRANSAKSI:</strong> Seluruh data, chart, dan indikator yang disajikan dalam laporan kami dihasilkan secara otomatis oleh algoritma berdasarkan data historis bursa. Informasi ini ditujukan semata-mata untuk edukasi dan referensi riset mandiri, bukan sebagai ajakan, rekomendasi, atau sinyal pasti untuk membeli/menjual aset tertentu. Segala keputusan transaksi beserta risikonya sepenuhnya berada di tangan pengguna (Do Your Own Research). Segala bentuk pembayaran langganan diproses secara aman melalui Payment Gateway resmi berizin Bank Indonesia.</p>
+    </div>
+</section>
+
+<footer class="bg-slate-950 text-slate-500 text-[11px] py-8 px-4 border-t border-slate-900">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+            &copy; 2026 Analisis Kuantitatif Saham. All Rights Reserved.
+        </div>
+        <div class="flex gap-4">
+            <a href="#" class="hover:text-emerald-400 transition-colors">Syarat & Ketentuan</a>
+            <a href="#" class="hover:text-emerald-400 transition-colors">Kebijakan Privasi</a>
+            <a href="mailto:admin@tataciptatama.my.id" class="hover:text-emerald-400 transition-colors">Kontak Kami</a>
+        </div>
     </div>
 </footer>
 
 <script>
     // 1 AGUSTUS 2026 -> Sinkron dengan Worker
-    const PROMO_END_DATE = new Date('2026-01-01T00:00:00+07:00');
+    const PROMO_END_DATE = new Date('2026-08-01T00:00:00+07:00');
 
     if (new Date() >= PROMO_END_DATE) {
         document.getElementById('promo-fase-1').classList.add('hidden');
